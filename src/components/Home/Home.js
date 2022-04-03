@@ -1,9 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useReviews from '../../Hooks/useReviews';
 import ReviewCard from '../ReviewCard/ReviewCard';
 
 const Home = () => {
     const [reviews, setReviews] = useReviews();
+
+    const navigate = useNavigate();
+
     return (
         <div>
             <div className='md:flex justify-between items-center md:mx-28'>
@@ -25,7 +29,7 @@ const Home = () => {
                     reviews.slice(0, 3).map(review => <ReviewCard key={review.id} review={review}></ReviewCard>)
                 }
 
-                <button className='text-lg font-semibold rounded-md mt-10 bg-blue-400 p-3'>See All Reviews</button>
+                <button onClick={() => navigate('/reviews')} className='text-lg font-semibold rounded-md mt-10 bg-blue-400 p-3'>See All Reviews</button>
             </div>
         </div>
     );
