@@ -9,6 +9,7 @@ const Header = () => {
             </div>
             <div className='text-xl font-semibold flex gap-4'>
                 <CustomLink className='p-2 rounded-md' to="/">Home</CustomLink>
+                <CustomLink className='p-2 rounded-md' to="/dashboard">Dashboard</CustomLink>
                 <CustomLink className='p-2 rounded-md' to="/reviews">Reviews</CustomLink>
                 <CustomLink className='p-2 rounded-md' to="/blogs">Blogs</CustomLink>
                 <CustomLink className='p-2 rounded-md' to="/about">About</CustomLink>
