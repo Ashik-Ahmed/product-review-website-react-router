@@ -17,8 +17,8 @@ const Home = () => {
                     <p className='italic text-blue-600'>A landmark volume in science writing by one of the great minds of our time, Stephen Hawking’s book explores such profound questions as: How did the universe begin—and what made its start possible? Does time always flow forward? Is the universe unending—or are there boundaries? Are there other dimensions in space? What will happen when it all ends?</p>
                     <button className='text-lg font-semibold bg-transparent hover:bg-orange-400 border-2 border-blue-400 py-2 px-4 rounded-3xl mt-8 shadow-xl'>Order Now</button>
                 </div>
-                <div className='border-8 border-orange-400 shadow-lg'>
-                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1333578746l/3869.jpg" alt="" />
+                <div className='border-8 border-orange-400 shadow-lg mt-4'>
+                    <img className='w-full' src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1333578746l/3869.jpg" alt="" />
                 </div>
             </div>
             <div className='text-center my-16'>

@@ -12,13 +12,13 @@ const CustomLink = ({ children, to, ...props }) => {
     return (
         <div>
             <Link
-                style={{ background: match ? "#FB923C" : "none" }}
+                style={{ background: match ? "#FB923C" : "none", color: match ? "blue" : "white", padding: match ? "7px" : "0px" }}
                 to={to}
                 {...props}
             >
                 {children}
             </Link>
-        </div>
+        </div >
     );
 };
 
