@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
 
+
+// Custom hook to load all reviews from data 
+
 const useReviews = () => {
     const [reviews, setReviews] = useState([]);
 

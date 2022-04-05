@@ -4,6 +4,8 @@ import useReviews from '../../Hooks/useReviews';
 import ReviewCard from '../ReviewCard/ReviewCard';
 
 const Home = () => {
+
+    // getting reviews data from custom hook 
     const [reviews, setReviews] = useReviews();
 
     const navigate = useNavigate();
@@ -25,10 +27,13 @@ const Home = () => {
                 <div className='text-3xl border-b-2 border-red-400 pb-2'>
                     <h2>Reader Reviews (3)</h2>
                 </div>
+
+                {/* Showing only 3 reviews in home page */}
                 {
                     reviews.slice(0, 3).map(review => <ReviewCard key={review.id} review={review}></ReviewCard>)
                 }
 
+                {/* This button will navigate user to all reviews page  */}
                 <button onClick={() => navigate('/reviews')} className='text-lg font-semibold bg-transparent hover:bg-orange-400 border-2 border-blue-400 py-2 px-4 rounded-3xl mt-8 shadow-xl'>See All Reviews</button>
             </div>
         </div>

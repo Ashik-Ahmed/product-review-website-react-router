@@ -4,8 +4,8 @@ const ReviewCard = (props) => {
     const { name, img, description, rating } = props.review;
 
 
+    // state for see More button 
     const [seeMore, setSeeMore] = useState(false);
-
     const handleSeeMore = () => {
         setSeeMore(!seeMore);
     }
@@ -19,6 +19,7 @@ const ReviewCard = (props) => {
             <div className='px-4 pb-3'>
                 <p className='font-bold mr-20'>Rating: {rating}</p>
 
+                {/* Showing blog details full/short on button click */}
                 {
                     seeMore ? (<p>{description}<button onClick={handleSeeMore} className='text-red-700 font-bold'>...See Less</button></p>) : <p>{description.slice(0, 200)}<button onClick={handleSeeMore} className='text-red-700 font-bold'>...See More</button></p>
                 }

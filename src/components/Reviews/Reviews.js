@@ -3,6 +3,8 @@ import useReviews from '../../Hooks/useReviews';
 import ReviewCard from '../ReviewCard/ReviewCard';
 
 const Reviews = () => {
+
+    // getting all reviews data from custom hook 
     const [reviews, setReviews] = useReviews();
     return (
         <div className='mt-3'>

@@ -45,6 +45,7 @@ const Dashboard = () => {
 
         <div className='md:grid grid-cols-2 gap-4 mx-auto md:mx-12'>
 
+            {/* Showing Revenue with Bar Chart  */}
             <div className='p-4 bg-white mt-4' style={{ width: '100%', height: 400 }}>
                 <h2 className='text-center mb-3'>Monthly Revenue Chart</h2>
                 <ResponsiveContainer>
@@ -65,6 +66,8 @@ const Dashboard = () => {
                     </BarChart>
                 </ResponsiveContainer>
             </div>
+
+            {/* Showing sell data with Line Chart */}
             <div className='p-4 bg-white mt-4' style={{ width: '100%', height: 400 }}>
                 <h2 className='text-center mb-3'>Monthly Sell Chart</h2>
                 <ResponsiveContainer>
@@ -87,8 +90,9 @@ const Dashboard = () => {
                     </LineChart>
                 </ResponsiveContainer>
             </div>
-            <div className='p-4 bg-white mt-4' style={{ width: '100%', height: 400 }}>
 
+            {/* Showing Investment data with Area Chart  */}
+            <div className='p-4 bg-white mt-4' style={{ width: '100%', height: 400 }}>
                 <h2 className='text-center mb-3'>Monthly Investment Chart</h2>
                 <ResponsiveContainer>
                     <AreaChart

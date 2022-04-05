@@ -6,7 +6,8 @@ Click the link for live preview [https://honest-review.netlify.app/](https://hon
 
 ## Site features
 
-* Showing data in different charts
-* Interesting educational blogs
-* 10 real buyers review
-* Use of Custom Hook
+* Use of Recharts
+* Custom Hook
+* Conditional rendering
+* Custom Active route
+* Mobile responsive

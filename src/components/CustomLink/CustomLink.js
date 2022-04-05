@@ -12,6 +12,7 @@ const CustomLink = ({ children, to, ...props }) => {
     return (
         <div>
             <Link
+                // setting some style on active link 
                 style={{ background: match ? "#FB923C" : "none", color: match ? "blue" : "white", padding: match ? "7px" : "0px" }}
                 to={to}
                 {...props}
