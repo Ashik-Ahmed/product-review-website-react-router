@@ -1,5 +1,5 @@
 import React from 'react';
-import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, ComposedChart, Legend, Line, LineChart, ResponsiveContainer, Scatter, Tooltip, XAxis, YAxis } from 'recharts';
 
 const Dashboard = () => {
 
@@ -45,27 +45,29 @@ const Dashboard = () => {
 
         <div className='md:grid grid-cols-2 gap-4 mx-auto md:mx-12'>
 
-            <div className='p-4 bg-white mt-4'>
-                <BarChart
-                    width={500}
-                    height={300}
-                    data={data}
-                    margin={{
-                        top: 10,
-                        right: 30,
-                        left: 0,
-                        bottom: 0,
-                    }}
-                >
-                    <XAxis dataKey="month" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey="revenue" fill="#8884d8" />
-                </BarChart>
+            <div className='p-4 bg-white mt-4' style={{ width: '100%', height: 400 }}>
+                <h2 className='text-center mb-3'>Monthly Revenue Chart</h2>
+                <ResponsiveContainer>
+                    <BarChart
+                        data={data}
+                        margin={{
+                            top: 10,
+                            right: 30,
+                            left: 0,
+                            bottom: 20,
+                        }}
+                    >
+                        <XAxis dataKey="month" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="revenue" fill="#8884d8" />
+                    </BarChart>
+                </ResponsiveContainer>
             </div>
-            <div className='p-4 bg-white mt-4'>
-                <ResponsiveContainer width="100%" height="100%">
+            <div className='p-4 bg-white mt-4' style={{ width: '100%', height: 400 }}>
+                <h2 className='text-center mb-3'>Monthly Sell Chart</h2>
+                <ResponsiveContainer>
                     <LineChart
                         width={500}
                         height={400}
@@ -74,7 +76,7 @@ const Dashboard = () => {
                             top: 10,
                             right: 30,
                             left: 0,
-                            bottom: 0,
+                            bottom: 20,
                         }}
                     >
                         <CartesianGrid strokeDasharray="3 3" />
@@ -85,7 +87,29 @@ const Dashboard = () => {
                     </LineChart>
                 </ResponsiveContainer>
             </div>
-        </div>
+            <div className='p-4 bg-white mt-4' style={{ width: '100%', height: 400 }}>
+
+                <h2 className='text-center mb-3'>Monthly Investment Chart</h2>
+                <ResponsiveContainer>
+                    <AreaChart
+                        data={data}
+                        margin={{
+                            top: 10,
+                            right: 30,
+                            left: 0,
+                            bottom: 20,
+                        }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="month" />
+                        <YAxis />
+                        <Tooltip />
+                        <Area type="monotone" dataKey="investment" stroke="#8884d8" fill="#8884d8" />
+                    </AreaChart>
+                </ResponsiveContainer>
+            </div>
+
+        </div >
     );
 };
 

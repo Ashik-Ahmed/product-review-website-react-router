@@ -13,7 +13,7 @@ const Blogs = () => {
             </div>
 
             <div className='bg-white py-6 px-16 my-10'>
-                <h2 className='text-2xl font-bold mb-4'>3. Difference between Inline, block & Inline-Block elements</h2>
+                <h2 className='text-2xl font-bold mb-4'>3. Difference between Inline, Block & Inline-Block elements</h2>
                 <table className='table-auto border-2 w-full'>
                     <thead className='bg-blue-200'>
                         <tr className=''>

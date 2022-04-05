@@ -29,7 +29,7 @@ const Home = () => {
                     reviews.slice(0, 3).map(review => <ReviewCard key={review.id} review={review}></ReviewCard>)
                 }
 
-                <button onClick={() => navigate('/reviews')} className='text-lg font-semibold rounded-md mt-10 bg-blue-400 p-3'>See All Reviews</button>
+                <button onClick={() => navigate('/reviews')} className='text-lg font-semibold bg-transparent hover:bg-orange-400 border-2 border-blue-400 py-2 px-4 rounded-3xl mt-8 shadow-xl'>See All Reviews</button>
             </div>
         </div>
     );
