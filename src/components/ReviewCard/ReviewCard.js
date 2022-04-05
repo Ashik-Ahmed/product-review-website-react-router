@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ReviewCard = (props) => {
     const { name, img, description, rating } = props.review;
+
+
+    const [seeMore, setSeeMore] = useState(false);
+
+    const handleSeeMore = () => {
+        setSeeMore(!seeMore);
+    }
+
     return (
         <div className='text-left bg-white rounded-md mx-auto  md:mx-6 mt-4'>
             <div className='flex items-center gap-4 mb-2 p-3 border-b-4'>
@@ -10,7 +18,12 @@ const ReviewCard = (props) => {
             </div>
             <div className='px-4 pb-3'>
                 <p className='font-bold mr-20'>Rating: {rating}</p>
-                <p>{description}</p>
+
+                {
+                    seeMore ? (<p>{description}<button onClick={handleSeeMore} className='text-red-700 font-bold'>...See Less</button></p>) : <p>{description.slice(0, 200)}<button onClick={handleSeeMore} className='text-red-700 font-bold'>...See More</button></p>
+                }
+
+                {/* <p>{description.slice(0, 200)}<button className='text-yellow-600'>...See More</button></p> */}
             </div>
         </div>
     );
